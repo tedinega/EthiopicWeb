@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ethiopic Input</title>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="src/ethiopicinput.min.js"></script>
+   <link rel="stylesheet" href="css/style.css"/>
+  
+  <script type="text/javascript">
+    
+  $(document).ready(function(){
+    $("#myInput").ethiopicInput();
+    $("#inputType").on('click',function(){
+        if($(this).text() === 'ET'){
+          $(this).text('EN');
+          $('#myInput').unbind();
+        }
+        else{
+          $(this).text('ET');
+          $("#myInput").ethiopicInput();
+        }
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div class="header_wrapper">
+    <div><span><h2>Integrate Ethiopic Input on your web application easily.</h2></span></div>
+  </div>
+  <div class="main">    
+    <div>Language: <button id="inputType">ET</button> </div>
+    <input id="myInput" style="width:300px;height: 100px;" />
+  </div>
+  </body>
+</html>
