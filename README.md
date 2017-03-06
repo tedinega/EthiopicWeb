@@ -9,7 +9,7 @@ Example
 
 #Usage
 
-```
+```javascript
 1. <script src="src/ethiopicinput.min.js"></script>
 
 2. <input id="myInput" style="width:300px;" />
